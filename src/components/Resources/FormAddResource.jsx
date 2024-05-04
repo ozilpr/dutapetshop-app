@@ -67,16 +67,36 @@ const FormAddResource = () => {
     // }
   }
 
-  const formattedPrice = parseFloat(price).toLocaleString('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0
-  })
-
   const setDescriptionHandler = (value) => {
     const { length } = value
     setCount(length)
     setDescription(value)
+  }
+
+  const handleInputPrice = (value) => {
+    if (value.length === 1 && value === '0') {
+      // Allow single zero
+      setPrice(value)
+    } else if (value.length > 1 && value.startsWith('0')) {
+      // If more than one character and starts with zero, remove leading zero
+      value = value.replace(/^0+/, '') // Remove leading zeros
+      setPrice(value)
+    } else if (!isNaN(value)) {
+      // Allow valid numeric input
+      setPrice(value)
+    }
+  }
+
+  const formattedPrice = (value) => {
+    if (!isNaN(value) && value !== '') {
+      return parseFloat(value).toLocaleString('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      })
+    } else {
+      return ''
+    }
   }
 
   return (
@@ -87,8 +107,8 @@ const FormAddResource = () => {
         </div>
         <div className="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
           <form name="userForm" autoComplete="off" onSubmit={saveData}>
-            <p className="text-center text-xs text-red-500">{errorMsg}</p>
-            <p className="text-center text-xs text-green-400">{msg}</p>
+            <p className="text-center text-md text-red-500">{errorMsg}</p>
+            <p className="text-center text-md text-green-400">{msg}</p>
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1 mt-4">Nama</label>
 
@@ -133,10 +153,10 @@ const FormAddResource = () => {
                 name="price"
                 pattern="[0-9]*"
                 value={price}
-                onChange={(e) => setPrice(e.target.value)}
+                onChange={(e) => handleInputPrice(e.target.value)}
                 placeholder="Harga produk"
               />
-              <p>{formattedPrice}</p>
+              <p>{formattedPrice(price)}</p>
             </div>
             <div className="flex items-center justify-start mt-4 gap-x-2">
               <button
