@@ -34,7 +34,7 @@ const Login = () => {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
                 Login
               </h1>
-              <p className="text-red-500">{msg}</p>
+              <p className="text-red-500 text-md">{msg}</p>
               <form className="space-y-4 md:space-y-6" autoComplete="off">
                 {/* {isError && <p className="text-center text-red-500">{message}</p>} */}
                 <div>

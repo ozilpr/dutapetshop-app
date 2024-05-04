@@ -311,8 +311,8 @@ const Trasanctions = () => {
           </div>
         </div>
         <div className="my-2">
-          <p className="text-center text-xs text-red-500">{errorMsg}</p>
-          <p className="text-center text-xs text-green-500">{msg}</p>
+          <p className="text-center text-md text-red-500">{errorMsg}</p>
+          <p className="text-center text-md text-green-500">{msg}</p>
         </div>
         <div className="text-sm">
           <table className="min-w-full">

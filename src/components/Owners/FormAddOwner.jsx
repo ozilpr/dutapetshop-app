@@ -86,8 +86,8 @@ const FormAddOwner = () => {
         </div>
         <div className="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
           <form name="userForm" autoComplete="off" onSubmit={saveData}>
-            <p className="text-center text-xs text-red-500">{errorMsg}</p>
-            <p className="text-center text-xs text-green-500">{msg}</p>
+            <p className="text-center text-md text-red-500">{errorMsg}</p>
+            <p className="text-center text-md text-green-500">{msg}</p>
             <div className="mt-4">
               <label className="block text-sm font-bold text-gray-700 mb-1 mt-4">
                 Kode Registrasi

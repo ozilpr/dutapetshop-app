@@ -84,8 +84,8 @@ const OwnerProfile = () => {
           <h1 className="text-2xl font-bold decoration-gray-400">Profil Owner</h1>
         </div>
         <div className="w-full px-4 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
-          <p className="text-center text-xs text-green-500">{msg}</p>
-          <p className="text-center text-xs text-red-500">{errorMsg}</p>
+          <p className="text-center text-md text-green-500">{msg}</p>
+          <p className="text-center text-md text-red-500">{errorMsg}</p>
           <h2>
             Kode Registrasi:{'  '}
             <p className="inline has-text-weight-semibold">{ownerData.register_code}</p>

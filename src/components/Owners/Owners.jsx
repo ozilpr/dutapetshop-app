@@ -148,8 +148,8 @@ const Owners = () => {
         <div className="flex flex-col my-3">
           <div className="overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
             <div className="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
-              <p className="text-center text-xs text-red-500">{errorMsg}</p>
-              <p className="text-center text-xs text-green-500">{msg}</p>
+              <p className="text-center text-md text-red-500">{errorMsg}</p>
+              <p className="text-center text-md text-green-500">{msg}</p>
               <table id="owner" className="min-w-full">
                 <thead>
                   <tr className="text-center">
