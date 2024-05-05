@@ -43,6 +43,7 @@ const Admin = () => {
               <Link to={`/edit-admin?adminId=${admin.id}`}>
                 <button
                   title="Edit"
+                  type="button"
                   className="sm:text-sm w-full bg-sky-500 hover:bg-sky-400 text-white font-semibold py-1  mb-1 rounded-md  items-center">
                   Edit
                 </button>

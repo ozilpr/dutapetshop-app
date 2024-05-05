@@ -151,6 +151,7 @@ const FormEditOwner = () => {
 
               <button
                 onClick={() => nav(-1)}
+                type="button"
                 className="px-6 py-2 ml-1 mr-4 my-1 text-sm font-semibold text-white bg-gray-400 rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
                 Kembali
               </button>

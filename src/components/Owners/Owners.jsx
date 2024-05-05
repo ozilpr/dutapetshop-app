@@ -108,6 +108,7 @@ const Owners = () => {
               <Link to={`/edit-owner?ownerId=${owner.id}`}>
                 <button
                   title="Edit"
+                  type="button"
                   className="sm:text-sm bg-sky-500 hover:bg-sky-400 text-white font-semibold py-1 px-2 rounded-md  items-center">
                   Edit
                 </button>
@@ -115,6 +116,7 @@ const Owners = () => {
 
               <button
                 title="Remove"
+                type="button"
                 onClick={() => {
                   if (window.confirm(`Konfirmasi Hapus ${owner.name}`)) deleteOwner(owner.id)
                 }}

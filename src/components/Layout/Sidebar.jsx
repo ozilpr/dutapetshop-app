@@ -41,6 +41,7 @@ const Sidebar = () => {
             <li className="px-1 m-3 hover:border-gray-300 w-auto list-none">
               <button
                 onClick={logout}
+                type="button"
                 className="button text-sm hover:bg-gray-300 bg-red-500 text-white">
                 Log Out
               </button>

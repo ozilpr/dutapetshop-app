@@ -119,6 +119,7 @@ const OwnerProfile = () => {
                     </p>
                     <button
                       title="Remove"
+                      type="button"
                       onClick={() => {
                         if (window.confirm(`Konfirmasi Hapus Kepemilikan`))
                           deletePetOwner(petOwner.id)
