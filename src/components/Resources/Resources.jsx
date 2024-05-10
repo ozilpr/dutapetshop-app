@@ -39,6 +39,7 @@ const Resources = () => {
     try {
       const response = await ResourcesService.deleteResourceById(user.accessToken, id)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
       fetchData(user.accessToken)
     } catch (error) {
       if (error.response) {

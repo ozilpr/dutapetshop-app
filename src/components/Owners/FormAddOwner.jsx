@@ -32,7 +32,7 @@ const FormAddOwner = () => {
       })
 
       setMessageWithDelay(response.message, 3000)
-
+      setErrorMsg('')
       setRegisterCode('')
       setName('')
       setPhone('')

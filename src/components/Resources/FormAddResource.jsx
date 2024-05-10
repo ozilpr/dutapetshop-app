@@ -34,7 +34,10 @@ const FormAddResource = () => {
         type: type,
         price: price
       })
+
       setMessageWithDelay(response.message, 3000)
+      setErrorMsg('')
+
       setName('')
       setType('')
       setDescription('')

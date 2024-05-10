@@ -71,6 +71,7 @@ const OwnerProfile = () => {
     try {
       const response = await PetOwnerService.deletePetOwnerById(user.accessToken, id)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
       fetchData(user.accessToken)
     } catch (error) {
       setErrorMsg(`Pet ${error}`)

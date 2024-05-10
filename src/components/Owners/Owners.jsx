@@ -39,6 +39,7 @@ const Owners = () => {
     try {
       const response = await OwnersService.deleteOwnerById(user.accessToken, id)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
       fetchData(user.accessToken)
       console.log(response)
     } catch (error) {

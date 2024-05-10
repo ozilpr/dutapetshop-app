@@ -62,7 +62,7 @@ const FormAddPet = () => {
         gender: gender,
         birthdate: dateString
       })
-      console.log(response)
+      console.log(response.data.message)
       const petId = response.data.petId
 
       if (ownerId) {
@@ -74,6 +74,8 @@ const FormAddPet = () => {
 
       if (response) {
         setMessageWithDelay(response.message, 5000)
+
+        setErrorMsg('')
 
         setName('')
         setType('')

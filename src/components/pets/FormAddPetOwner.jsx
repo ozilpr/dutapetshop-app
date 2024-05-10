@@ -73,6 +73,8 @@ const FormAddPetOwner = () => {
           fetchData(user.accessToken)
           setMessageWithDelay(response.message, 5000)
 
+          setErrorMsg('')
+
           setPetName('')
           setPetId('')
 

@@ -54,6 +54,7 @@ const OwnerTransaction = () => {
         } else {
           setMsg('Belum ada data transaksi')
         }
+        setErrorMsg('')
       } catch (error) {
         setErrorMsg(`Transaction ${error}`)
       }
@@ -68,8 +69,9 @@ const OwnerTransaction = () => {
   const deleteTransaction = async (id) => {
     try {
       const response = await TransactionService.deleteTransactionDetailById(user.accessToken, id)
-      fetchData(user.accessToken)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
+      fetchData(user.accessToken)
     } catch (error) {
       setErrorMsg(`Transaction ${error}`)
     }
@@ -80,6 +82,7 @@ const OwnerTransaction = () => {
     try {
       const response = await TransactionService.deleteTransactionById(user.accessToken, id)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
       fetchData(user.accessToken)
     } catch (error) {
       setErrorMsg(`Transaction ${error}`)

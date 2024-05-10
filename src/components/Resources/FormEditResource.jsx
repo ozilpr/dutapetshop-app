@@ -39,6 +39,7 @@ const FormEditResource = () => {
         setDescription(response.data.resource.description)
         setType(response.data.resource.type)
         setPrice(response.data.resource.price)
+        setErrorMsg('')
       } catch (error) {
         setErrorMsg(error)
       }
@@ -63,6 +64,7 @@ const FormEditResource = () => {
         price: updatedPrice
       })
       setMessageWithDelay(response.message, 3000)
+      setErrorMsg('')
     } catch (error) {
       setErrorMsg(`Resource ${error}`)
     }

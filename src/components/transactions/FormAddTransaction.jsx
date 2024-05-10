@@ -76,6 +76,7 @@ const FormAddTransaction = () => {
       await TransactionsService.addTransaction(user.accessToken, ownerId, transactionsData)
 
       setMessageWithDelay('Berhasil menambah transaksi', 5000)
+      setErrorMsg('')
     } catch (error) {
       setErrorMsg(`Transaction ${error}`)
     }

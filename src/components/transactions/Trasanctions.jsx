@@ -38,6 +38,7 @@ const Trasanctions = () => {
     try {
       const response = await TransactionService.getTransactionDetails(accessToken)
       setData(response.data)
+      setErrorMsg('')
     } catch (error) {
       if (error.response) {
         setErrorMsg(`Transaction ${error}`)
@@ -53,6 +54,7 @@ const Trasanctions = () => {
     try {
       const response = await TransactionService.deleteTransactionDetailById(user.accessToken, id)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
       fetchData(user.accessToken)
     } catch (error) {
       if (error.response) {
@@ -65,6 +67,7 @@ const Trasanctions = () => {
     try {
       const response = await TransactionService.deleteTransactionById(user.accessToken, id)
       setMessageWithDelay(response, 3000)
+      setErrorMsg('')
       fetchData(user.accessToken)
     } catch (error) {
       if (error.response) {
