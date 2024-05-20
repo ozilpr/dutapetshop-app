@@ -6,13 +6,13 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.6.8",
+    "axios": "^1.7.1",
     "bulma": "^0.9.4",
     "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-datepicker": "^4.10.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -24,8 +24,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "watch" : "npx tailwindcss -i ./src/input.css -o ./src/index.css --watch",
-    "minify" : "npx tailwindcss -i ./src/input.css -o ./src/index.css --minify"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./src/index.css --watch",
+    "minify": "npx tailwindcss -i ./src/input.css -o ./src/index.css --minify"
   },
   "eslintConfig": {
     "extends": [
